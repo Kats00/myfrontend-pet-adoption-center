@@ -1,0 +1,16 @@
+<p>show-country works!</p>
+
+<h1>Country</h1>
+
+<form (ngSubmit)="editCountry(country.id, country)">
+    Country id: 
+    <input type="text" name="id" [(ngModel)]="country.id" />
+    <br>
+    Country name:
+    <input type="text" name="name" [(ngModel)]="country.name" />
+    <br>
+    Country language:
+    <input type="text" name="language" [(ngModel)]="country.language" />
+
+    <button type="submit">Submit</button>
+</form>

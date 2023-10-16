@@ -1,0 +1,12 @@
+<h2>Dawgs</h2>
+<div *ngFor = "let dog of dogs">
+    <a href="/dog/{{dog.id}}">
+        <h1>
+            {{dog.name}}
+        </h1>
+    </a>
+    <button (click)="deleteDog(dog.id)">Delete</button>
+</div>
+<a href="/addDog">
+    <button>Add Dog</button>
+</a>

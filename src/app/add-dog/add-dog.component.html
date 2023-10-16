@@ -1,0 +1,17 @@
+<p>add-dog</p>
+
+<form (ngSubmit)="addDog()">
+    Dog name:
+    <input type="text" name="name" [(ngModel)]="dog.name" />
+    <br>
+    Dog Breed:
+    <input type="text" name="breed" [(ngModel)]="dog.breed" />
+    Dog Age:
+    <input type="text" name="age" [(ngModel)]="dog.age" />
+    Dog Health:
+    <input type="text" name="health" [(ngModel)]="dog.health" />
+    Distance:
+    <input type="text" name="distance" [(ngModel)]="dog.distance" />
+
+    <button type="submit">Add Dog</button>
+</form>
