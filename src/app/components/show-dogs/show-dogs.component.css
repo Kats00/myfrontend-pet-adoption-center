@@ -1,0 +1,14 @@
+.title {
+    padding: 1rem 0;
+    font-size: 4em;
+}
+
+.table-container {
+    width: 90vw;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #0d6efd;
+    color: white;
+}

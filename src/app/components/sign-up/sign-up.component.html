@@ -1,0 +1,40 @@
+<p>sign-up works!</p>
+
+<label class="switch">
+    <input type="checkbox"  id="toggleFormSwitch">
+    <span class="slider round"></span>
+</label>
+
+<form class="add-account" *ngIf="showForm === 'user'" (ngSubmit)="addUser()">
+    username:
+    <input type="text" name="username" [(ngModel)]="user.username" />
+    <br>
+    password:
+    <input type="text" name="password" [(ngModel)]="user.password" />
+    email:
+    <input type="text" name="email" [(ngModel)]="user.email" />
+    cellNum:
+    <input type="text" name="cellphoneNum" [(ngModel)]="user.cellphoneNum" />
+    first name:
+    <input type="text" name="firstName" [(ngModel)]="user.firstName" />
+    last name:
+    <input type="text" name="lastName" [(ngModel)]="user.lastName" />
+
+    <button type="submit">Add Dog</button>
+</form>
+
+<form class="add-account" *ngIf="showForm === 'admin'" (ngSubmit)="addAdmin()">
+    username:
+    <input type="text" name="username" [(ngModel)]="admin.username" />
+    <br>
+    password:
+    <input type="text" name="password" [(ngModel)]="admin.password" />
+    email:
+    <input type="text" name="email" [(ngModel)]="admin.email" />
+    cellNum:
+    <input type="text" name="cellphoneNum" [(ngModel)]="admin.cellphoneNum" />
+    department:
+    <input type="text" name="department" [(ngModel)]="admin.department" />
+
+    <button type="submit">Add Dog</button>
+</form>

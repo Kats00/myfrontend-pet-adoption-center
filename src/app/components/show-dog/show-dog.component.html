@@ -1,0 +1,100 @@
+<section class="flex centered full-height">
+    <form class="dog-info-cont flex centered-x column gap embosed" (ngSubmit)="editDog(dog.id, dog)" *ngIf="currentUser.role === 'ADMIN'">
+        <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="dog.name">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="breed" class="col-sm-2 col-form-label">Breed</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="breed" name="breed" [(ngModel)]="dog.breed">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="age" class="col-sm-2 col-form-label">Age</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="age" name="age" [(ngModel)]="dog.age">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="health" class="col-sm-2 col-form-label">Health</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="health" name="health" [(ngModel)]="dog.health">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="distance" class="col-sm-2 col-form-label">Distance</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="distance" name="distance" [(ngModel)]="dog.distance">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="status" class="col-sm-2 col-form-label">Status</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="status" name="status" [(ngModel)]="dog.status">
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+    </form>
+
+    <form class="dog-info-cont flex centered-x column gap embosed" (ngSubmit)="editDog(dog.id, dog)" *ngIf="currentUser.role === 'USER'">
+        <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="name" name="name" [(ngModel)]="dog.name" [disabled]="isInputDisabled">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="breed" class="col-sm-2 col-form-label">Breed</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="breed" name="breed" [(ngModel)]="dog.breed" [disabled]="isInputDisabled">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="age" class="col-sm-2 col-form-label">Age</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="age" name="age" [(ngModel)]="dog.age" [disabled]="isInputDisabled">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="health" class="col-sm-2 col-form-label">Health</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="health" name="health" [(ngModel)]="dog.health" [disabled]="isInputDisabled">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="distance" class="col-sm-2 col-form-label">Distance</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control" id="distance" name="distance" [(ngModel)]="dog.distance" [disabled]="isInputDisabled">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="status" class="col-sm-2 col-form-label">Status</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="status" name="status" [(ngModel)]="dog.status" [disabled]="isInputDisabled">
+            </div>
+        </div>
+    </form>
+</section>
+
+<!--form (ngSubmit)="editDog(dog.id, dog)">
+    Dog id: 
+    <input type="text" name="id" [(ngModel)]="dog.id" />
+    <br>
+    Dog name:
+    <input type="text" name="name" [(ngModel)]="dog.name" />
+    <br>
+    Dog Breed:
+    <input type="text" name="breed" [(ngModel)]="dog.breed" />
+    Dog Age:
+    <input type="text" name="age" [(ngModel)]="dog.age" />
+    Dog Health:
+    <input type="text" name="health" [(ngModel)]="dog.health" />
+    Distance:
+    <input type="text" name="distance" [(ngModel)]="dog.distance" />
+
+    <button type="submit">Submit</button>
+</form-->

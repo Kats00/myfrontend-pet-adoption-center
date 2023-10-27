@@ -1,0 +1,29 @@
+.site-footer {
+    background-color: #333; /* Background color for the footer */
+    color: #fff; /* Text color */
+    padding: 50px 0;
+}
+
+.site-footer-title {
+    font-size: 24px;
+    color: #007bff; /* Change to your desired text color (blue in this case) */
+    margin-bottom: 20px;
+}
+
+.site-footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
+}
+
+.text-blue {
+    color: #007bff; /* Blue text color for contact details */
+}
+
+.site-footer-bottom {
+    background-color: #333; /* Background color for the footer bottom */
+    padding: 20px 0;
+}

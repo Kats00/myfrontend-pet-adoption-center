@@ -1,0 +1,23 @@
+.site-header {
+    background-color: #007bff; /* Change to your desired background color */
+    padding: 15px 0;
+    color: #fff; /* Text color */
+}
+
+.site-header .header-info {
+    margin-right: 30px;
+}
+
+.site-header i {
+    font-size: 1.2rem; /* Adjust icon size as needed */
+}
+
+.site-header a {
+    color: #fff; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-header a:hover {
+    color: #f2f2f2;
+}

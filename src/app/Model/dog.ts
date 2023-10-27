@@ -5,4 +5,6 @@ export class Dog {
     age = 0
     health = ''
     distance = 0
+    status = ''
+    user = null
 }

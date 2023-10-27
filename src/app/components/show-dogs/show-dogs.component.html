@@ -1,0 +1,82 @@
+<main>
+    <section class="contact-section section-padding flex centered column" id="section_4">
+        <h3 class="title fw-bolder fs-2qx me-6">Dog Records</h3><br>
+        <div class="container">
+            <div class="my-1 flex centered gap">
+                <a href="/addDog" *ngIf="currentUser.role === 'ADMIN'" class="btn btn-sm btn-primary">Add</a><br><br>
+            </div>
+            <div class="flex centered column">
+                <table class="table table-striped table-hover rounded">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Breed</th>
+                            <th scope="col">age</th>
+                            <th scope="col">Health</th>
+                            <th scope="col">Status</th>
+                            <th scope="col" class="flex centered">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody *ngFor = "let dog of dogs">
+                        <tr>
+                            <th scope="row">{{dog.id}}</th>
+                            <td>{{dog.name}}</td>
+                            <td>{{dog.breed}}</td>
+                            <td>{{dog.age}}</td>
+                            <td>{{dog.health}}</td>
+                            <td>{{dog.status}}</td>
+                            <td class="flex centered gap">
+                                <a href="/dog/{{dog.id}}" class="btn btn-sm btn-primary">View</a>
+                                <a href="/dogs" *ngIf="currentUser.role === 'ADMIN'" (click)="deleteDog(dog.id)" class="btn btn-sm btn-primary">Delete</a>
+                                <a href="/dogs" *ngIf="dog.status !== 'Adopted'" (click)="adoptDog(dog.id)"  class="btn btn-sm btn-primary">Adopt</a>
+                            </td>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!--section class="title full-width flex centered column full-height">
+    <div class="title full-width flex centered">
+        <h1>Pawsome Dogs</h1>
+    </div>
+
+    <div class="table-container flex centered">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Breed</th>
+                <th scope="col">age</th>
+                <th scope="col">Health</th>
+            </tr>
+            </thead>
+            <tbody *ngFor = "let dog of dogs">
+            <tr>
+                <th scope="row">{{dog.id}}</th>
+                <td>{{dog.name}}</td>
+                <td>{{dog.breed}}</td>
+                <td>{{dog.age}}</td>
+                <td>{{dog.health}}</td>
+            </tr>
+            </tbody>
+        </table> 
+    </div>
+</section-->
+
+<!--div *ngFor = "let dog of dogs">
+    <a href="/dog/{{dog.id}}">
+        <h1>
+            {{dog.name}}
+        </h1>
+    </a>
+    <button *ngIf="currentUser.role === 'ADMIN'" (click)="deleteDog(dog.id)">Delete</button>
+</div>
+<a href="/addDog">
+    <button>Add Dog</button>
+</a-->
